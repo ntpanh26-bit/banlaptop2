@@ -14,8 +14,8 @@
         header h1 { font-size: 2.2em; letter-spacing: 1px; }
 
         /* Navigation */
-        nav { background-color: #1f2937; padding: 12px 0; text-align: center; }
-        nav a { color: #f9fafb; text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s; }
+        nav { background-color: #4470ac; padding: 12px 0; text-align: center; }
+        nav a { color: #f2fbff; text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s; }
         nav a:hover { color: #4e54c8; }
 
         /* Main */
@@ -84,7 +84,7 @@
         </div>
     </main>
     <footer>
-        &copy; 2026 Web Bán Laptop | Designed by vinvin
+        &copy; 2026 Web Bán Laptop | Designed by vinvinnnnn
     </footer>
 </body>
 </html>
