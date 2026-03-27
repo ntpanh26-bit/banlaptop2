@@ -84,7 +84,7 @@
         </div>
     </main>
     <footer>
-        &copy; 2026 Web Bán Laptop | Designed by vinvinnnnn
+        &copy; 2026 Web Bán Laptop | Designed by vinvinnnnnerger
     </footer>
 </body>
 </html>
