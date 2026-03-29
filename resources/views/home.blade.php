@@ -2,89 +2,161 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Web Bán Laptop</title>
+    <title>Shop Laptop</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
-        /* Reset cơ bản */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f5f5f5;
+        }
 
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f5f7fa; }
+        .navbar {
+            background: #000;
+        }
 
-        /* Header */
-        header { background: linear-gradient(90deg, #ffffff, #01c0ff); color: white; padding: 25px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
-        header h1 { font-size: 2.2em; letter-spacing: 1px; }
+        .navbar a {
+            color: white !important;
+        }
 
-        /* Navigation */
-        nav { background-color: #4470ac; padding: 12px 0; text-align: center; }
-        nav a { color: #f2fbff; text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s; }
-        nav a:hover { color: #4e54c8; }
+        .banner {
+            background: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8') no-repeat center;
+            background-size: cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
 
-        /* Main */
-        main { padding: 30px; text-align: center; }
-        main h2 { color: #111827; margin-bottom: 20px; font-size: 1.8em; }
+        .banner h1 {
+            background: rgba(0,0,0,0.6);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
 
-        /* Card sản phẩm */
-        .card-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;max-width: 960px; margin: auto; }
-        .card { background-color: white; padding: 20px; width: 220px; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); transition: transform 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { margin-bottom: 10px; color: #4e54c8; }
-        .card p { color: #52f0f3; font-size: 0.95em; }
-        .card
+        .card {
+            transition: 0.3s;
+        }
 
-        /* Footer */
-        footer { background:#4e54c8; color:white; padding:15px 0; text-align:center; font-size:0.9em; }
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .price {
+            color: red;
+            font-weight: bold;
+        }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Web Bán Laptop</h1>
-    </header>
-    <nav>
-        <a href="#">Trang Chủ</a>
-        <a href="#">Sản Phẩm</a>
-        <a href="#">Liên Hệ</a>
-        <a href="">Giỏ Hàng</a>
-        <a href="">Admin</a>
-    </nav>
-    <main>
-        <h2>Sản Phẩm Nổi Bật</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>Laptop A</h3>
-                <p>Intel i5, RAM 8GB, SSD 256GB</p>
-            </div>
-            <div class="card">
-                <h3>Laptop B</h3>
-                <p>Intel i7, RAM 16GB, SSD 512GB</p>
-            </div>
-            <div class="card">
-                <h3>Laptop C</h3>
-                <p>AMD Ryzen 5, RAM 8GB, SSD 256GB</p>
-            </div>
-            <div class="card">
-                <h3>Laptop D</h3>
-                <p>Intel i9, RAM 32GB, SSD 1TB</p>
-            </div>
-             <div class="card">
-                <h3>Laptop D</h3>
-                <p>Intel i9, RAM 32GB, SSD 1TB</p>
-            </div>
-             <div class="card">
-                <h3>Laptop D</h3>
-                <p>Intel i9, RAM 32GB, SSD 1TB</p>
-            </div>
-             <div class="card">
-                <h3>Laptop D</h3>
-                <p>Intel i9, RAM 32GB, SSD 1TB</p>
-            </div>
-             <div class="card">
-                <h3>Laptop D</h3>
-                <p>Intel i9, RAM 32GB, SSD 1TB</p>
-            </div>
-            
+
+<!-- MENU -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand text-white" href="#">💻 SHOP LAPTOP</a>
+
+        <div>
+            <a class="me-3" href="#">Trang chủ</a>
+            <a class="me-3" href="#">Sản phẩm</a>
+            <a class="me-3" href="#">Giỏ hàng</a>
+            <a href="#">Liên hệ</a>
         </div>
-    </main>
-    <footer>
-        &copy; 2026 Web Bán Laptop | Designed by vinvinnnnn
-    </footer>
+    </div>
+</nav>
+
+<!-- BANNER -->
+<div class="banner">
+    <h1>🔥 Laptop xịn - Giá sinh viên</h1>
+</div>
+
+<!-- SẢN PHẨM -->
+<div class="container mt-5">
+
+    <div class="row g-4 mt-2">
+
+        <!-- SP 1 -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{{ asset('img/lap1.jpg') }}" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Laptop Gaming</h5>
+                    <p class="price">20.000.000đ</p>
+                    <button class="btn btn-primary">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SP 2 -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{{ asset('img/lap2.jpg') }}" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Macbook Pro</h5>
+                    <p class="price">35.000.000đ</p>
+                    <button class="btn btn-primary">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SP 3 -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{{ asset('img/lap3.jpg') }}" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Laptop Văn Phòng</h5>
+                    <p class="price">12.000.000đ</p>
+                    <button class="btn btn-primary">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+ <!-- SP 4 -->
+    <div class="col-md-4">
+        <div class="card shadow">
+            <img src="{{ asset('img/lap4.jpg') }}" class="card-img-top">
+            <div class="card-body text-center">
+                <h5>Asus Gaming</h5>
+                <p class="price">18.000.000đ</p>
+                <button class="btn btn-primary">Mua ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SP 5 -->
+    <div class="col-md-4">
+        <div class="card shadow">
+            <img src="{{ asset('img/lap5.jpg') }}" class="card-img-top">
+            <div class="card-body text-center">
+                <h5>Dell XPS</h5>
+                <p class="price">25.000.000đ</p>
+                <button class="btn btn-primary">Mua ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SP 6 -->
+    <div class="col-md-4">
+        <div class="card shadow">
+            <img src="{{ asset('img/lap6.jpg') }}" class="card-img-top">
+            <div class="card-body text-center">
+                <h5>HP Pavilion</h5>
+                <p class="price">15.000.000đ</p>
+                <button class="btn btn-primary">Mua ngay</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="text-center mt-5 p-3 bg-dark text-white">
+    © 2026 Shop Laptop - vinvin
+</div>
+
 </body>
 </html>
