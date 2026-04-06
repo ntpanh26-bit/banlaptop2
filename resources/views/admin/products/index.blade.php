@@ -44,10 +44,10 @@
 <div class="sidebar">
     <h4 class="text-center py-3">⚙️ ADMIN</h4>
 
-    <a href="/admin/products">📦 Sản phẩm</a>
-    <a href="#">🧾 Đơn hàng</a>
-    <a href="#">👤 Người dùng</a>
-    <a href="/">🏠 Trang chủ</a>
+    <a href="/admin/products"class="btn btn-outline-light w-100 mt-2">📦 Sản phẩm</a>
+    <a href="/admin/orders" class="btn btn-outline-light w-100 mt-2">📦 Đơn hàng</a>
+    <a href="#"class="btn btn-outline-light w-100 mt-2">👤 Người dùng</a>
+    <a href="/"class="btn btn-outline-light w-100 mt-2">🏠 Trang chủ</a>
     <hr>
 
 <form method="POST" action="/logout" class="px-3">

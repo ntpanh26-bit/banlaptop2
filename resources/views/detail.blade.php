@@ -31,9 +31,9 @@
                 {{ $p->description }}
             </p>
 
-            <button class="btn btn-success mt-3">
-                🛒 Thêm vào giỏ
-            </button>
+            <a href="/add-to-cart/{{ $p->id }}" class="btn btn-success mt-3">
+    🛒 Thêm vào giỏ
+</a>
         </div>
 
     </div>

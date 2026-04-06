@@ -95,3 +95,63 @@ Route::get('/product/{id}', function ($id) {
     $p = \App\Models\Product::find($id);
     return view('detail', compact('p'));
 });
+
+// Thêm vào giỏ
+Route::get('/add-to-cart/{id}', function ($id) {
+
+    $product = \App\Models\Product::find($id);
+
+    $cart = session()->get('cart', []);
+
+    if(isset($cart[$id])) {
+        $cart[$id]['quantity']++;
+    } else {
+        $cart[$id] = [
+            "name" => $product->name,
+            "price" => $product->price,
+            "quantity" => 1
+        ];
+    }
+
+    session()->put('cart', $cart);
+
+    return back();
+});
+
+
+// Trang giỏ hàng
+Route::get('/cart', function () {
+    return view('cart');
+});
+// Đặt hàng
+use App\Models\Order;
+
+Route::get('/checkout', function () {
+    return view('checkout');
+});
+
+Route::post('/checkout', function (Illuminate\Http\Request $request) {
+
+    $total = 0;
+
+    foreach(session('cart', []) as $item){
+        $total += $item['price'] * $item['quantity'];
+    }
+
+    Order ::create([
+        'name' => $request->name,
+        'phone' => $request->phone,
+        'address' => $request->address,
+        'total' => $total
+    ]);
+
+    session()->forget('cart');
+
+    return "Đặt hàng thành công!";
+});
+
+//Admin xem đơn
+Route::get('/admin/orders', function () {
+    $orders = \App\Models\Order::all();
+    return view('admin.orders', compact('orders'));
+});

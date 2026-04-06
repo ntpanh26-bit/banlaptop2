@@ -68,7 +68,7 @@
         <div>
             <a class="me-3" href="/">Trang chủ</a>
             <a class="me-3" href="/products">Sản phẩm</a>
-            <a class="me-3" href="#">Giỏ hàng</a>
+            <a class="me-3" href="/cart">Giỏ hàng</a>
             <a href="#">Liên hệ</a>
         </div>
     </div>
