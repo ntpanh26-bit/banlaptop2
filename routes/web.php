@@ -115,7 +115,7 @@ Route::get('/add-to-cart/{id}', function ($id) {
 
     session()->put('cart', $cart);
 
-    return back();
+    return back()->with('success', 'Đã thêm vào giỏ hàng!');
 });
 
 
